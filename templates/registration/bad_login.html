@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BAD ログイン (脆弱版)</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+        background: #fff5f5;
+        color: #222;
+      }
+      .container {
+        max-width: 520px;
+        margin: 60px auto;
+        background: #fff;
+        border: 2px solid #e53e3e;
+        border-radius: 12px;
+        padding: 28px;
+        box-shadow: 0 10px 24px rgba(229, 62, 62, 0.15);
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 1.4rem;
+        color: #c53030;
+      }
+      .warn {
+        background: #fed7d7;
+        color: #742a2a;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+      .error {
+        color: #b00020;
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        margin-top: 14px;
+        margin-bottom: 6px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #c9d0d7;
+        border-radius: 8px;
+      }
+      button {
+        margin-top: 16px;
+        width: 100%;
+        border: 0;
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: #e53e3e;
+        color: #fff;
+        cursor: pointer;
+      }
+      pre {
+        background: #1a202c;
+        color: #f7fafc;
+        padding: 12px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.85rem;
+      }
+      .hint {
+        margin-top: 16px;
+        font-size: 0.85rem;
+        color: #4a5568;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>BAD ログイン (脆弱版・学習用)</h1>
+      <div class="warn">
+        この画面は SQL インジェクションを学ぶための<strong>意図的に脆弱な実装</strong>です。<br />
+        CSRF 保護なし / 生 SQL 文字列連結 / 平文パスワード比較。<br />
+        <strong>本番環境では絶対に使用しないでください。</strong>
+      </div>
+
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %}
+
+      <!-- 注意: csrf_token を意図的に省略しています -->
+      <form method="post" action="">
+        <label for="username">username</label>
+        <input id="username" name="username" type="text" autocomplete="off" />
+
+        <label for="password">password</label>
+        <input id="password" name="password" type="text" autocomplete="off" />
+
+        <button type="submit">ログイン (BAD)</button>
+      </form>
+
+      {% if executed_sql %}
+      <p class="hint">サーバーが実行した SQL:</p>
+      <pre>{{ executed_sql }}</pre>
+      {% endif %}
+
+      <p class="hint">
+        ヒント: username に <code>' OR 1=1 --</code> のような文字列を入れると何が起きるか観察してみましょう。
+      </p>
+    </main>
+  </body>
+</html>

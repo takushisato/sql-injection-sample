@@ -46,9 +46,10 @@ python manage.py createsuperuser
 
 7. ブラウザでアクセス
 
-- http://127.0.0.1:8000/
-- http://127.0.0.1:8000/accounts/login/
-- http://127.0.0.1:8000/admin/
+- ホーム: http://127.0.0.1:8000/accounts/
+- ログイン: http://127.0.0.1:8000/accounts/login/
+- BADログイン: http://127.0.0.1:8000/accounts/bad-login/
+- ログアウト: http://127.0.0.1:8000/accounts/logout/
 
 ## User 管理モデルとログイン
 
