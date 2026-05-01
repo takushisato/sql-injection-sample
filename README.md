@@ -47,7 +47,19 @@ python manage.py createsuperuser
 7. ブラウザでアクセス
 
 - http://127.0.0.1:8000/
+- http://127.0.0.1:8000/accounts/login/
 - http://127.0.0.1:8000/admin/
+
+## User 管理モデルとログイン
+
+- `accounts.User`（`AbstractUser` 継承）を利用しています。
+- 追加項目: `display_name`, `created_at`, `updated_at`
+- Django 標準認証を使ってログイン/ログアウトできます。
+
+管理ユーザー作成後、以下でログイン確認できます。
+
+- ログイン: http://127.0.0.1:8000/accounts/login/
+- ログイン後ホーム: http://127.0.0.1:8000/
 
 停止するとき:
 
