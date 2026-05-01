@@ -1,0 +1,168 @@
+[
+  {
+    "model": "store.category",
+    "pk": 1,
+    "fields": { "name": "Books", "slug": "books", "created_at": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "model": "store.category",
+    "pk": 2,
+    "fields": { "name": "Electronics", "slug": "electronics", "created_at": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "model": "store.category",
+    "pk": 3,
+    "fields": { "name": "Clothing", "slug": "clothing", "created_at": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "model": "store.category",
+    "pk": 4,
+    "fields": { "name": "Kitchen", "slug": "kitchen", "created_at": "2026-01-01T00:00:00Z" }
+  },
+  {
+    "model": "store.category",
+    "pk": 5,
+    "fields": { "name": "Toys", "slug": "toys", "created_at": "2026-01-01T00:00:00Z" }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "達人に学ぶSQL徹底指南書",
+      "description": "SQLの設計と最適化を学べる定番書。",
+      "price": "3200.00",
+      "stock": 25,
+      "is_published": true,
+      "created_at": "2026-02-01T10:00:00Z",
+      "updated_at": "2026-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "リーダブルコード",
+      "description": "より良いコードを書くための実践テクニック集。",
+      "price": "2640.00",
+      "stock": 40,
+      "is_published": true,
+      "created_at": "2026-02-02T10:00:00Z",
+      "updated_at": "2026-02-02T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "ワイヤレスイヤホン Pro",
+      "description": "アクティブノイズキャンセリング搭載。",
+      "price": "18800.00",
+      "stock": 15,
+      "is_published": true,
+      "created_at": "2026-02-03T10:00:00Z",
+      "updated_at": "2026-02-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "メカニカルキーボード 75%",
+      "description": "ホットスワップ対応・JIS配列。",
+      "price": "14800.00",
+      "stock": 8,
+      "is_published": true,
+      "created_at": "2026-02-04T10:00:00Z",
+      "updated_at": "2026-02-04T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "27インチ 4K モニター",
+      "description": "USB-C 給電対応・sRGB 99%。",
+      "price": "59800.00",
+      "stock": 5,
+      "is_published": true,
+      "created_at": "2026-02-05T10:00:00Z",
+      "updated_at": "2026-02-05T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "name": "オーガニックコットン T シャツ",
+      "description": "肌触り抜群のシンプルT。",
+      "price": "2980.00",
+      "stock": 100,
+      "is_published": true,
+      "created_at": "2026-02-06T10:00:00Z",
+      "updated_at": "2026-02-06T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "category": 3,
+      "name": "ストレッチデニム",
+      "description": "動きやすい伸縮素材。",
+      "price": "6900.00",
+      "stock": 30,
+      "is_published": true,
+      "created_at": "2026-02-07T10:00:00Z",
+      "updated_at": "2026-02-07T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "name": "ステンレスマグ 350ml",
+      "description": "保温・保冷両対応。",
+      "price": "1980.00",
+      "stock": 60,
+      "is_published": true,
+      "created_at": "2026-02-08T10:00:00Z",
+      "updated_at": "2026-02-08T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "name": "鋳鉄スキレット 20cm",
+      "description": "蓄熱性に優れたフライパン。",
+      "price": "3580.00",
+      "stock": 20,
+      "is_published": true,
+      "created_at": "2026-02-09T10:00:00Z",
+      "updated_at": "2026-02-09T10:00:00Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "name": "木製ブロック 100ピース",
+      "description": "知育に最適な無塗装ブロック。",
+      "price": "4480.00",
+      "stock": 12,
+      "is_published": false,
+      "created_at": "2026-02-10T10:00:00Z",
+      "updated_at": "2026-02-10T10:00:00Z"
+    }
+  }
+]
